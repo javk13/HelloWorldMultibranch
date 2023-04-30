@@ -1,3 +1,5 @@
 prueba1 develop para scan multibranch
 
 modificación para comprobar escaneo y ejecución de pipeline
+
+modificación para expresion regular
