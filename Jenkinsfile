@@ -3,7 +3,7 @@ pipeline {
     
     stages {
 
-        stage('Clean Workspace'){
+        //stage('Clean Workspace'){
 		    steps{
 			//limpiamos los directorios de trabajo, que se descarge la info
 			    sh '''
