@@ -4,14 +4,14 @@ pipeline {
     stages {
 
         //stage('Clean Workspace'){
-		    steps{
+		    //steps{
 			//limpiamos los directorios de trabajo, que se descarge la info
-			    sh '''
-				rm -fr $WORKSPACE/*
-				ls -lrth $WORKSPACE/
-			    '''
-		    }
-	    }
+			    //sh '''
+				//rm -fr $WORKSPACE/*
+				//ls -lrth $WORKSPACE/
+			    //'''
+		    //}
+	    //}
 
         stage('Get Code') {
             steps {
