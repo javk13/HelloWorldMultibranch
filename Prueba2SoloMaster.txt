@@ -3,3 +3,5 @@ prueba1 Master para scan multibranch
 Prueba 2, modificación para comprobar escaneo y ejecución de pipeline.
 
 Prueba para expresion regular en Property strategy
+
+prueba workspace2
