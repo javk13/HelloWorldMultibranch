@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'agent1linux'
+    }
     
     stages {
 
@@ -14,6 +16,7 @@ pipeline {
 	    //}
 
         stage('Get Code') {
+                        
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
 		    echo 'Prueba sin descarga ni limpieza'
