@@ -15,8 +15,8 @@ pipeline {
 
         stage('Get Code') {
             steps {
-                echo 'Prueba sin descarga ni limpieza'
-		    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+		    echo 'Prueba sin descarga ni limpieza'
                 // Obtener código del repo con comando jenkis del plugin github
                 //git 'https://github.com/javk13/HelloWorldMultibranch.git'
                 //script {
