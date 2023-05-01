@@ -5,3 +5,5 @@ prueba 2, modificación para comprobar escaneo y ejecución de pipeline
 modificación para expresion regular
 
 prueba para workspace
+
+prueba workspace2
