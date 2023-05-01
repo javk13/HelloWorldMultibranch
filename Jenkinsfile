@@ -14,6 +14,9 @@ pipeline {
 	    //}
 
         stage('Get Code') {
+            agent {
+                label 'agent1linux'
+            }
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') { 
 		    echo 'Prueba sin descarga ni limpieza'
@@ -27,6 +30,9 @@ pipeline {
         } 
         
         stage('Build') {
+            agent {
+                label 'agent2linux'
+            }
             steps {
                 echo 'Que NOOOOO, python no compila código'
                 echo WORKSPACE
@@ -38,6 +44,9 @@ pipeline {
         stage('Tests') {
             parallel {
                 stage('Unit') {
+                    agent {
+                        label 'agent1linux'
+                    }
                     steps {
                         //catchError-captura errores para continuar pipeline y resto de etapas. 
                         catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
@@ -49,6 +58,9 @@ pipeline {
                     }    
                 }
                 stage('Service') {
+                    agent {
+                        label 'agent2linux'
+                    }
                     steps {
                         catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                             sh '''
@@ -66,8 +78,10 @@ pipeline {
             }
         }
         
-        stage('Results') 
-        {
+        stage('Results') {
+            agent {
+                label 'agent2linux'
+            }
             steps {
                 junit 'result*.xml'
             }    
