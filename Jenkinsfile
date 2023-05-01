@@ -1,8 +1,6 @@
 pipeline {
-    agent {
-        label 'agent2linux'
-    }
-    
+    agent any
+
     stages {
 
         //stage('Clean Workspace'){
@@ -66,6 +64,15 @@ pipeline {
                         }
                     }
                 }
+            }
+        }
+
+        stage ('Deploy') {
+            agent {
+                label 'agent2linux'
+            }
+            steps {
+                echo 'Etapa de despliegue'
             }
         }
         
