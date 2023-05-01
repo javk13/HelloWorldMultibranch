@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'agent1linux'
+        label 'agent2linux'
     }
     
     stages {
