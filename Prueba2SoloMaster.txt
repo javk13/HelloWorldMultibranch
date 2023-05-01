@@ -4,4 +4,4 @@ Prueba 2, modificación para comprobar escaneo y ejecución de pipeline.
 
 Prueba para expresion regular en Property strategy
 
-prueba workspace2
+prueba workspace2 .1
